@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import SongList from './SongList';
 import myAudioFile from './assets/songs/11.mp3';
-import ProgressBar from './ProgressBar';
-import Buttons from './Buttons';
 
 import song1 from './assets/songs/1.mp3';
 import song2 from './assets/songs/2.mp3';
@@ -13,6 +11,7 @@ import song5 from './assets/songs/5.mp3';
 import song6 from './assets/songs/6.mp3';
 import song7 from './assets/songs/7.mp3';
 import song11 from './assets/songs/11.mp3';
+import Bottom from './Bottom';
 
 function App() {
 
@@ -91,14 +90,7 @@ function App() {
       </div>
 
       {/* Bottom-  */}
-      <div className='bottom'>
-        <ProgressBar time={time} progress={progress} audioRef={audioRef} setTime={setTime}/>
-        <Buttons songs={songs} setIsPlay={setIsPlay} isPlay={isPlay} audioRef={audioRef} myAudioFile={myAudioFile} handlePlay={handlePlay} playingIndex={playingIndex} setPlayingIndex={setPlayingIndex} />
-        <div className='songInfo'>
-          <img src='https://i.gifer.com/5uwq.gif' width='42px' alt='Sound-ringing' style={isPlay ? {opacity:0, transition: '0.3s ease-in'}: {opacity:1, transition: '0.3s ease-in'}}/>
-          <p>{playingSong ? playingSong.songName : "Millionaire - Honey Singh"}</p>
-        </div>
-      </div>
+      <Bottom playingSong={playingSong} time={time} progress={progress} audioRef={audioRef} setTime={setTime} myAudioFile={myAudioFile} handlePlay={handlePlay} playingIndex={playingIndex} setPlayingIndex={setPlayingIndex} songs={songs} setIsPlay={setIsPlay} isPlay={isPlay}/>
     </>
   )
 }

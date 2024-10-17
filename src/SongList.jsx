@@ -5,8 +5,6 @@ import { useRef, useState } from 'react';
 
 
 export default function SongList ({audioRef, setPlayingSong, songs, setIsPlay, isPlay, playingIndex, setPlayingIndex}) {
-
-
     
 
     const handlePlay= (index) => {
@@ -39,7 +37,6 @@ export default function SongList ({audioRef, setPlayingSong, songs, setIsPlay, i
                     <img src={song.coverPath} style={{borderRadius: '50%'}} alt="img"/>
                     <span>{song.songName}</span>
                     <span className='songlistplay'>
-                        <span className='timestamp'>{audioRef.current.duration ? audioRef.current.duration : "00:00"}</span>
                         <div>
                             {playingIndex === index ? <PauseCircleOutlineIcon onClick={() => pauseButton(index)} className='play-btn' style={{fontSize:"28px"}} /> :<PlayCircleOutlineIcon onClick={() =>handlePlay(index)} className='play-btn' style={{fontSize:"28px"}}/>}
                         </div>

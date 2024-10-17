@@ -1,5 +1,3 @@
-import {useState} from 'react';
-
 export default function ProgressBar ({time=0, progress=0, audioRef, setTime}) {
 
 
