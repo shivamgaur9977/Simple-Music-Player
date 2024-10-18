@@ -127,3 +127,15 @@ nav ul li {
 .icons {
   margin-top: 20px;
 }
+
+.add-music-btn {
+  margin-right: '10px';
+  background-color: black; 
+  color: white; 
+  border: none
+}
+
+.add-music-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

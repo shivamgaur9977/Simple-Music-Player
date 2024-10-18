@@ -12,6 +12,10 @@ import song6 from './assets/songs/6.mp3';
 import song7 from './assets/songs/7.mp3';
 import song11 from './assets/songs/11.mp3';
 import Bottom from './Bottom';
+import { Route, Router, Routes } from 'react-router';
+import { Link } from 'react-router-dom';
+import HomePage from './Home';
+import AboutPage from './About';
 
 function App() {
 
@@ -70,12 +74,13 @@ function App() {
 
   return (
     <>
-      <nav>
+      <nav style={{display:"flex", justifyContent:'space-between', flexaWrap: 'wrap'}}>
         <ul>
           <li className='brand'><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png" alt="spotify" />Spotify</li>
           <li>Home</li>
           <li>About</li>
         </ul>
+        <button className='add-music-btn'>Add Music</button>
       </nav>
 
       {/* List of songs */}
